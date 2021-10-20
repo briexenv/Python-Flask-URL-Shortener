@@ -4,7 +4,7 @@ input.addEventListener("keyup", function(event) {
   if(event.keyCode === 13) {
     var xhr = new XMLHttpRequest();
     var route = randomRoute(4);
-    xhr.open("POST", "http://127.0.0.1:5000/short", true);
+    xhr.open("POST", "/short", true);
     xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     xhr.onload = function () {
       var message = JSON.parse(xhr.responseText);
