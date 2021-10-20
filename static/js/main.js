@@ -10,7 +10,7 @@ input.addEventListener("keyup", function(event) {
       var message = JSON.parse(xhr.responseText);
       var result = document.querySelector(".result");
       if (message.status === "OK") {
-        result.innerHTML = '<span class="result-success">success : </span>' + "http://127.0.0.1:5000/" + route;
+        result.innerHTML = '<span class="result-success">success : </span>' + "http://flaskmicro.herokuapp.com/" + route;
       } else {
         result.innerHTML = '<span class="result-error">error : </span>please check your input!';
       }
