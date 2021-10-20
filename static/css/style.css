@@ -1,0 +1,137 @@
+@import 'https://fonts.googleapis.com/css?family=Ubuntu';
+
+:root {
+  --white: #ffffff;
+  --grey: #bdc3c7;
+  --dark: #2c3e50;
+  --shadow: 10px 10px 10px  #888888;
+  --lighter-dark: #34495e;
+  --red: #e74c3c;
+  --orange: #f1c40f;
+  --green: #2ecc71;
+  
+  --open: #2ecc71;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background : var(--grey);
+  font-family: 'Ubuntu', sans-serif; 
+  font-size : 17px ;
+}
+
+.window {
+  width: 600px;
+  height: 350px;
+  margin: 75px auto;
+  background-color: var(--dark);
+  border-radius: 5px;
+  box-shadow: var(--shadow);
+  position: relative;
+}
+
+.bash {
+  width: 600px;
+  height: 310px;
+  background-color: var(--lighter-dark);
+  border-radius: 5px;
+  top: 40px;
+  position: absolute;
+  overflow-y: scroll;
+}
+
+.btn {
+  width: 15px;
+  height: 15px; 
+  border-radius: 50%;
+  float: right; 
+  margin: 13px 4px;
+  border: none;
+}
+
+.close {
+  background-color: var(--red);
+}
+
+.max {
+  background-color: var(--orange);
+}
+
+.min {
+  background-color: var(--green);
+}
+
+.title {
+  color: var(--white); 
+  font-weight: bold; 
+  padding: 10px;
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+input {
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--white);
+}
+
+input::placeholder {
+  color: var(--grey);
+}
+
+label.text, .text {
+  color: var(--green);
+}
+
+.history {
+  display: flex;
+  flex-direction: column;
+}
+
+.result {
+  color: var(--white);
+}
+
+.result-success {
+  color: var(--orange);
+}
+
+.result-error {
+  color: var(--red);
+}
+
+@media (max-width: 680px) {
+  body {
+    font-size : 12px ;
+  }
+  
+  .window {
+    width: 300px;
+    height: 180px;
+  }
+  
+  .bash {
+    width: 300px;
+    height: 160px;
+    top: 20px;
+  }
+  
+  .btn {
+    width: 8px;
+    height: 8px;
+    margin: 6px 2px;
+  }
+  
+  .title {
+    padding: 4px;
+  }
+}
