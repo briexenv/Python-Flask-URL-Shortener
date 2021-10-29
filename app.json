@@ -1,5 +1,5 @@
 {
-    "name": "php-url-shortener",
+    "name": "python-flask-url-shortener",
     "description": "A simple python flask webapp which creates short url from long urls.",
     "logo": "https://raw.githubusercontent.com/briexenv/gfm/main/IMG-20210113-WA0005.jpg",
     "keywords": [
