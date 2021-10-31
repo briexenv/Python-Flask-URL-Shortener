@@ -1,0 +1,6 @@
+{
+  "secret_key": "dGhpcyBpcyBzaW1scGxlIHNlY3JldCBrZXkgZW5jb2RlZCB3aXRoIGJhc2U2NA==",
+  "base_url": "https://flaskmicro.herokuapp.com",
+  "database": "data.json",
+  "str_length": 4
+}

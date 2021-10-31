@@ -1,0 +1,139 @@
+:root {
+  --dark: #374151;
+  --dark-2: #e5e7eb;
+  --black: #000000;
+  --green-4: #34d399;
+  --green-6: #059669;
+  --green-8: #065f46;
+  --white: #ffffff;
+}
+
+@font-face{
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 400;
+  src: local('Poppins'),url(Poppins-Regular.ttf) format('truetype');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: Poppins;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+#form-section {
+  height: 100vh;
+  width: 100%;
+  background: radial-gradient(circle, var(--dark) 1%, var(--black) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#web-title {
+  color: var(--white);
+  margin-top: 56px;
+}
+
+.form {
+  width: 90vw;
+  max-width: 405px;
+  height: auto;
+  background: var(--dark-2);
+  border-radius: 6px;
+  box-shadow: 0 0 4px var(--black);
+  padding: 42px 28px;
+  margin-top: 36px;
+}
+
+.form-group {
+  height: 40px;
+  display: grid;
+  grid-template-columns: auto 100px;
+}
+
+.input {
+  padding: 0 12px;
+  outline: none;
+  border: 2px solid var(--green-8);
+  border-right: none;
+  border-radius: 4px 0 0 4px;
+  width: 249px;
+}
+
+.button {
+  background-color: var(--green-6);
+  border: 2px solid var(--green-8);
+  border-radius: 0 4px 4px 0;
+  color: var(--white);
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: var(--green-8);
+}
+
+.table {
+  background-color: var(--white);
+  width: 100%;
+  margin-top: 24px;
+  border-color: var(--green-8);
+}
+
+.table td {
+  padding: 8px;
+  white-space: nowrap;
+}
+
+.table tr td:nth-child(1) {
+  background-color: var(--green-6);
+  color: var(--white);
+  font-weight: bold;
+}
+
+.table tr:nth-child(2) td:nth-child(1) {
+  border-bottom-color: var(--white);
+  border-top-color: var(--white);
+}
+
+.table tr:nth-child(1) td:nth-child(1) {
+  border-bottom-color: var(--white);
+}
+
+.table tr:nth-child(3) td:nth-child(1) {
+  border-top-color: var(--white);
+}
+
+.table tr td:nth-child(2) {
+  width: 210px;
+}
+
+.text-wrapper {
+  display: block;
+  overflow-x: scroll;
+  max-width: 210px;
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 3.6rem;
+  }
+}

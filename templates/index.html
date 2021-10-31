@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Url Shortener</title>
+  
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+</head>
+<body>
+  
+  <main>
+    <section id="form-section">
+      <h1 id="web-title">Url Shortener</h1>
+      <form class="form" action="/short" method="post">
+        <div class="form-group">
+          <input 
+          type="text" 
+          name="url" 
+          class="input"
+          placeholder="Shorten your link"
+          required
+          {% if session['status'] == 'Success': %}
+          value="{{ session['result'] }}"
+          {% endif %}
+          >
+          <button type="submit" class="button">Shorten</button>
+        </div>
+        {% if 'status' in session: %}
+        <table border="1" cellspacing="0" class="table">
+          <tr>
+            <td>Status</td>
+            <td>{{ session['status'] }}</td>
+          </tr>
+          <tr>
+            <td>Long URL</td>
+            <td><span class="text-wrapper">{{ session['url'] }}</span></td>
+          </tr>
+          <tr>
+            <td>Short URL</td>
+            <td><span class="text-wrapper">{{ session['result'] }}</span></td>
+          </tr>
+        </table>
+        {% endif %}
+      </form>
+    </section>
+  </main>
+  
+</body>
+</html>
